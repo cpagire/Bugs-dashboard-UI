@@ -1,0 +1,396 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ outline: none;
+ font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background-color: #f2f2ff;
+}
+
+h2{
+    font: 18px;
+    padding: 15px 0;
+}
+
+h2 > span{
+    font-size: 14px;
+}
+
+.navbar{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    height: 55px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 2;
+    padding-left: 4rem;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.27);
+}
+
+.title{
+    align-items: center;
+    display: flex;
+}
+
+.profile{
+    display: flex;
+    width: 32%;
+    max-width: 200px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile-image{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-name{
+    font-size: 0.9rem;
+    margin-left: -20px;
+}
+
+.side-toggle{
+    position: fixed;
+    z-index: 2;
+    top: 18;
+    left: 25;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#toggle{
+    display: none;
+}
+
+.sidebar{
+    position: fixed;
+    height: 100%;
+    width: 225px;
+    left: 0;
+    top: 0;
+    padding: 80px 0 20px 0;
+    color: rgb(110, 110, 110);
+    background-color: #fff;
+    box-shadow: 1px 0 5px rgb(0, 0, 0, 0.5);
+}
+
+.sidebar-menu{
+    display: flex;
+    align-items: center;
+    padding: 15px 45px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar-menu > span{
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.sidebar-menu:hover{
+    color: #2d2d98;
+    background-color: #f8f8fb;
+}
+
+#toggle:checked ~ .sidebar {
+    width: 0px;
+}
+
+#toggle:checked ~ .sidebar .sidebar-menu{
+    display: none;
+}
+
+#toggle:checked ~ main{
+    padding: 6rem 2rem 2rem 2rem;
+}
+
+/***************dashboard*************/
+main{
+    height: 100%;
+    padding: 6rem 2rem 2rem 2rem;
+    color: #201f2b;
+}
+
+.dashboard-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    padding-bottom: 30px;
+    grid-template-areas: "total1 total2 total3 total4 total4"
+        "detail detail detail customer customer"
+        "users users charts charts charts";
+}
+
+.card{
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.27);
+}
+
+.total1{
+    grid-area: total1;
+    background-color: #ff4242;
+    color: #fff;
+}
+
+.total2{
+    grid-area: total2;
+    background-color: #9132bd;
+    color: #fff;
+}
+
+.total3{
+    grid-area: total3;
+    background-color: #15a1fe;
+    color: #fff;
+}
+
+.total4{
+    grid-area: total4;
+    background-color: #ffa705;
+    color: #fff;
+}
+
+.detail{
+    grid-area: detail;
+    overflow-x: auto;
+}
+.customer{
+    grid-area: customer;
+    overflow-x: auto;
+}
+
+.users{
+    grid-area: users;
+    overflow-x: auto;
+}
+
+.charts{
+    grid-area: charts;
+    overflow-x: auto;
+}
+
+.info{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-detail h2{
+    font-size: 24px;
+}
+
+.info-detail p{
+    font-size: 14px;
+}
+
+.info-image{
+    font-size: 50px;
+    color: #fff;
+    padding: 0px 0px 56px 0px;
+}
+
+.detail-header{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-header button{
+    height: 30px;
+    width: 120px;
+    border: 1px solid #2d2d98;
+    background-color: #2d2d98;
+    color: #f2f2f2;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.detail-header button:hover{
+    background-color: transparent;
+    color: #2d2d98;
+}
+
+.detail table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.detail table tr:nth-child(odd){
+    background-color: #f8f8fb;
+}
+
+.detail table th{
+    background-color: #f4f4fb;
+}
+
+.detail table th, 
+.detail table td{
+    padding: 0.8rem 0.2rem;
+    text-align: left;
+    min-width: 120px;
+    font-size: 14px;
+}
+
+.detail table tr:hover{
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #dbdbff;
+    cursor: pointer;
+}
+
+.status{
+    padding: 0.3rem 0.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 1;
+    font-size: 0.7rem;
+    border: 0.1px solid;
+}
+
+.inprogress{
+    background-color: #fff2d7;
+    color: #ffa705;
+}
+
+.confirmed{
+    background-color: #dcedde;
+    color: #15a1fe;
+}
+
+.completed{
+    background-color: #dcedde;
+    color: #37aa38;
+}
+
+.cancelled{
+    background-color: #ffd0d0;
+    color: #ff0000;
+}
+
+.charts-header{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dailyChart{
+    width:100%;
+    max-width:600px;
+}
+
+/*timeline*/
+.timeline{
+	padding-left:5px;
+    font-size: 14px;
+}
+.timeline ul{
+	list-style-type:none;
+	border-left:3px solid #5f32ff;
+	padding:0px 0px 0px 15px;
+}
+.timeline ul li{
+	padding:10px 10px;
+	position:relative;
+	cursor:pointer;
+	transition:.5s;
+    font-size: 12px;
+}
+.timeline ul li span{
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: underline;
+}
+.content{
+    font-weight: 400;
+    padding-top: 3px;
+}
+.timeline ul li:before{
+	position:absolute;
+	content:'';
+	width:13px;
+	height:13px;
+	background-color:#5f32ff;
+	border-radius:50%;
+	left:-23px;
+	top:15px;
+	transition:.5s;
+}
+.timeline ul li:hover{
+	background-color:#5f32ff;
+    color: #fff;
+    border-radius: 5px;
+}
+.timeline ul li:hover:before{
+	background-color:#5f32ff;
+	box-shadow:0px 0px 10px 2px #5f32ff;
+}
+
+
+@media screen and (max-width:980px){
+    .dashboard-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "total1 total2"
+            "total3 total4"
+            "detail detail"
+            "customer customer"
+            "users users"
+            "charts charts";
+    }
+}
+
+@media screen and (max-width: 480px){
+    .profile-name{
+        display: none;
+    }
+    .sidebar{
+        display: none;
+    }
+    main{
+        padding: 6rem 2rem 2rem 2rem;
+    }
+    #toggle:checked ~ .sidebar{
+        width: 200px;
+        display: block;
+    }
+    #toggle:checked ~ .sidebar .sidebar-menu{
+        display: block;
+    }
+    #toggle:checked ~ main{
+        padding: 6rem 2rem 2rem 2rem;
+    }
+    .dashboard-container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "total1"
+            "total2"
+            "total3"
+            "total4"
+            "detail"
+            "customer"
+            "users"
+            "charts";
+    }
+    .detail table{
+        font-size: 0.9rem;
+    }
+}

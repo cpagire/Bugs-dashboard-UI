@@ -1,0 +1,297 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width. initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <nav class="navbar">
+        <h4 class="title">Dashboard</h4>
+        <div class="profile">
+            <span class="fas fa-bell"></span>
+            <img class="profile-image" src="avtar.jpg">
+            <p class="profile-name">Rahul Deshmukh</p>
+        </div>
+    </nav>
+    <input type="checkbox" id="toggle" checked="checked">
+    <label class="side-toggle" for="toggle">
+        <span class="fas fa-bars"></span>
+    </label>
+
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <span class="fas fa-clipboard-list"></span>
+            <p>Overview</p>
+        </div>
+        <div class="sidebar-menu">
+            <span class="fas fa-users"></span>
+            <p>Teams</p>
+        </div>
+        <div class="sidebar-menu">
+            <span class="far fa-credit-card"></span>
+            <p>Components</p>
+        </div>
+        <div class="sidebar-menu">
+            <span class="fas fa-chart-line"></span>
+            <p>Statistics</p>
+        </div>
+        <div class="sidebar-menu">
+            <span class="fas fa-id-card"></span>
+            <p>Contact</p>
+        </div>
+        <div class="sidebar-menu">
+            <span class="fas fa-cog"></span>
+            <p>Setting</p>
+        </div>
+        <div class="sidebar-menu">
+            <span class="fas fa-sign-out-alt"></span>
+            <p>Logout</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="dashboard-container">
+            <div class="card total1">
+                <div class="info">
+                    <div class="info-detail">
+                        <h3>Total Bugs</h3>
+                        <p>Raised</p>
+                        <h2>567
+                        </h2>
+                    </div>
+                    <div class="info-image">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card total2">
+                <div class="info">
+                    <div class="info-detail">
+                        <h3>Confirmed Bugs</h3>
+                        <p>Accepted</p>
+                        <h2>565</h2>
+                    </div>
+                    <div class="info-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card total3">
+                <div class="info">
+                    <div class="info-detail">
+                        <h3>Resolved Bugs</h3>
+                        <p>Tested</p>
+                        <h2>520</h2>
+                    </div>
+                    <div class="info-image">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card total4">
+                <div class="info">
+                    <div class="info-detail">
+                        <h3>Open Bugs</h3>
+                        <p>Inprogress</p>
+                        <h2>45</h2>
+                    </div>
+                    <div class="info-image">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card detail"> 
+                <div class="detail-header">
+                    <h2>Recent raised bugs</h2>
+                    <button>See More</button>
+                </div>
+                <table>
+                    <tr>
+                        <th>Defect</th>
+                        <th>Component</th>
+                        <th>Status</th>
+                        <th>QA Name</th>
+                        <th>Raised</th>
+                        <th>Last Updated</th>
+                    </tr>
+                    <tr>
+                        <td>#DF1234234590</td>
+                        <td>Registration</td>
+                        <td>
+                            <span class="status inprogress">
+                                <i class="fas fa-circle"></i> Raised
+                            </span>
+                        </td>
+                        <td>Anuj Sharma</td>
+                        <td>Apr 1 2022</td>
+                        <td>Apr 6 2022</td>
+                    </tr>
+                    <tr>
+                        <td>#DF1234234591</td>
+                        <td>User login</td>
+                        <td>
+                            <span class="status confirmed">
+                                <i class="fas fa-circle"></i> Confirmed
+                            </span>
+                        </td>
+                        <td>Neha Sishodiya</td>
+                        <td>Apr 11 2022</td>
+                        <td>Today</td>
+                    </tr>
+                    <tr>
+                        <td>#DF1234234592</td>
+                        <td>Template wise report</td>
+                        <td>
+                            <span class="status completed">
+                                <i class="fas fa-circle"></i> Resolved
+                            </span>
+                        </td>
+                        <td>Vijay Agrawal</td>
+                        <td>May 23 2022</td>
+                        <td>Yesterday</td>
+                    </tr>
+                    <tr>
+                        <td>#DF1234234593</td>
+                        <td>User registration</td>
+                        <td>
+                            <span class="status inprogress">
+                                <i class="fas fa-circle"></i> Raised
+                            </span>
+                        </td>
+                        <td>Ankitkumar Sharma</td>
+                        <td>Jun 19 2022</td>
+                        <td>Jun 21 2022</td>
+                    </tr>
+                    <tr>
+                        <td>#DF1234234594</td>
+                        <td>Template details report</td>
+                        <td>
+                            <span class="status cancelled">
+                                <i class="fas fa-circle"></i> Cancelled
+                            </span>
+                        </td>
+                        <td>Manish Kumar</td>
+                        <td>Aug 23 2022</td>
+                        <td>Today</td>
+                    </tr>
+                    <tr>
+                        <td>#DF1234234595</td>
+                        <td>Home landing page</td>
+                        <td>
+                            <span class="status inprogress">
+                                <i class="fas fa-circle"></i> Raised
+                            </span>
+                        </td>
+                        <td>Neha Malhotra</td>
+                        <td>Jul 13 2022</td>
+                        <td>Jul 16 2022</td>
+                    </tr>
+                    <tr>
+                        <td>#DF1234234596</td>
+                        <td>Sending whatsapp message</td>
+                        <td>
+                            <span class="status inprogress">
+                                <i class="fas fa-circle"></i> Raised
+                            </span>
+                        </td>
+                        <td>Ankitkumar Sharma</td>
+                        <td>Apr 1 2022</td>
+                        <td>Apr 6 2022</td>
+                    </tr>
+                    <tr>
+                        <td>#DF1234234597</td>
+                        <td>Monthly campign report</td>
+                        <td>
+                            <span class="status inprogress">
+                                <i class="fas fa-circle"></i> Raised
+                            </span>
+                        </td>
+                        <td>Neha Sishodiya</td>
+                        <td>Jul 27 2022</td>
+                        <td>Jul 29 2022</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card customer">
+                <div class="charts-header">
+                    <h2>Last activities</h2>
+                </div>
+                <div class="timeline">
+                    <ul>
+                        <li>
+                            <span><span>Manish Kumar</span><span>22/08/2020 13:21:03</span></span>
+                            <div class="content">
+                                <p>
+                                    Manish entered into workspace.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><span>Neha Sishodiya</span><span>22/08/2022 13:20:56</span></span>
+                            <div class="content">
+                                <p>
+                                    Neha raised new deffects #DF1234234597.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><span>Ankitkumar Sharma</span><span>22/08/2017 13:16:43</span></span>
+                            <div class="content">
+                                <p>
+                                    Ankitkumar assigned deffect #DF1234234593 to Chethan.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><span>Manish Kumar</span><span>22/08/2020 13:21:03</span></span>
+                            <div class="content">
+                                <p>
+                                    Manish entered into workspace.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><span>Neha Sishodiya</span><span>22/08/2022 13:20:56</span></span>
+                            <div class="content">
+                                <p>
+                                    Neha raised new deffects #DF1234234597.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><span>Ankitkumar Sharma</span><span>22/08/2017 13:16:43</span></span>
+                            <div class="content">
+                                <p>
+                                    Ankitkumar assigned deffect #DF1234234593 to Chethan.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card users">
+                <div class="charts-header">
+                    <h2>Severity wise bugs</h2>
+                </div>
+                <canvas id="pia_chart" style="width:100%;max-width:600px"></canvas>
+            </div>
+            <div class="card charts">
+                <div class="charts-header">
+                    <h2>Bugs raised and resolved</h2>
+                </div>
+                <canvas id="dailyChart"></canvas>
+            </div>
+            
+        </div>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="charts.js"></script>
+</html>
